@@ -4,7 +4,7 @@ PRACTICE Exam 1, problem 1.
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Valerie Galluzzi, Mark Hays, Amanda Stouder, Aaron Wilkin,
          their colleagues, and Trey Kline.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
 # Students:
@@ -181,7 +181,7 @@ def problem1a(m, n):
       -- If m is 30 and n is 100, the correct answer is about 1.278.
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
     # -------------------------------------------------------------------------
@@ -219,26 +219,26 @@ def run_test_problem1b():
     print('--------------------------------------------------')
 
     #Test 1:
-    expected = XXX
-    actual = problem1b(YYY, YYY)
+    expected = 5
+    actual = problem1b(3, 5)
     print('Test 1 expected:', expected)
     print('       actual:  ', actual)
 
     #Test 2:
-    expected = XXX
-    actual = problem1b(YYY, YYY)
+    expected = 1
+    actual = problem1b(2, 1)
     print('Test 1 expected:', expected)
     print('       actual:  ', actual)
 
     #Test 3:
-    expected = XXX
-    actual = problem1b(YYY, YYY)
+    expected = 44
+    actual = problem1b(5, 40)
     print('Test 1 expected:', expected)
     print('       actual:  ', actual)
 
     #Test 4:
-    expected = XXX
-    actual = problem1b(YYY, YYY)
+    expected = 4
+    actual = problem1b(2, 4)
     print('Test 1 expected:', expected)
     print('       actual:  ', actual)
 
@@ -260,7 +260,7 @@ def problem1b(m, f):
            since there are 44 primes between 5 and 200.
      """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     ###########################################################################
@@ -273,7 +273,11 @@ def problem1b(m, f):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 to 15 minutes.
     # -------------------------------------------------------------------------
-
+    counter = 0
+    for k in range (m, (f*m)+1):
+        if is_prime(k) == True:
+            counter = counter + 1
+    return counter
 
 def run_test_problem1c():
     """ Tests the   problem1c   function. """
@@ -371,6 +375,11 @@ def problem1c(n):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 20 minutes.
     # -------------------------------------------------------------------------
+    product = 1
+    for k in range(2, n+1):
+        if is_prime(k):
+            product = product * k
+    return sum_of_digits(product)
 
 
 ###############################################################################
