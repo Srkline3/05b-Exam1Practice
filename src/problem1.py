@@ -3,7 +3,7 @@ PRACTICE Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Valerie Galluzzi, Mark Hays, Amanda Stouder, Aaron Wilkin,
-         their colleagues, and PUT_YOUR_NAME_HERE.
+         their colleagues, and Trey Kline.
 """  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ###############################################################################
@@ -28,6 +28,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 
 import testing_helper
 import time
+import math
 
 
 def main():
@@ -38,7 +39,7 @@ def main():
 
 
 ###############################################################################
-# TODO: 2.  READ the green doc-string for the:
+# DONE: 2.  READ the green doc-string for the:
 #   - is_prime
 #   - sum_of_digits
 # functions defined below.  You do NOT need to understand their
@@ -106,7 +107,7 @@ def sum_of_digits(number):
 def run_test_problem1a():
     """ Tests the   problem1a   function. """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement this TEST function.
+    # DONE: 3. Implement this TEST function.
     #   It TESTS the  problem1a  function defined below.
     #   Include at least **   4   ** tests (we wrote two for you).
     # -------------------------------------------------------------------------
@@ -137,6 +138,7 @@ def run_test_problem1a():
     actual = problem1a(30, 100)
     print_actual_result_of_test(expected, actual, test_results, precision=3)
 
+
     print_summary_of_test_results(test_results)
 
     # -------------------------------------------------------------------------
@@ -148,6 +150,17 @@ def run_test_problem1a():
     #   print('Test 1 expected:', expected)
     #   print('       actual:  ', actual)
     # -------------------------------------------------------------------------
+    #  Test 3
+    expected = 1.647784162
+    actual = problem1a(0, -4)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', actual)
+
+    #  Test 4
+    expected = 1.955209482
+    actual = problem1a(-1, 3)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', actual)
 
 
 def problem1a(m, n):
@@ -176,7 +189,13 @@ def problem1a(m, n):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 minutes.
     # -------------------------------------------------------------------------
-
+    q = (n**2)-(m**2)+1
+    start = m**2
+    maf = 0
+    for k in range(q):
+        maf = maf + math.sin(start)
+        start = start + 1
+    return maf
 
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
