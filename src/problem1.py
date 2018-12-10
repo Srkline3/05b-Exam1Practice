@@ -218,6 +218,30 @@ def run_test_problem1b():
     print('Testing the   problem1b   function:')
     print('--------------------------------------------------')
 
+    #Test 1:
+    expected = XXX
+    actual = problem1b(YYY, YYY)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', actual)
+
+    #Test 2:
+    expected = XXX
+    actual = problem1b(YYY, YYY)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', actual)
+
+    #Test 3:
+    expected = XXX
+    actual = problem1b(YYY, YYY)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', actual)
+
+    #Test 4:
+    expected = XXX
+    actual = problem1b(YYY, YYY)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', actual)
+
 
 def problem1b(m, f):
     """
