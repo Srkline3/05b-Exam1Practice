@@ -112,7 +112,7 @@ def run_test_problem3a():
     expected = 62
     answer = problem3a(window4, point, 8)
     print()
-    print('Test 4 expected:', expected)
+    print('Test 5 expected:', expected)
     print('       actual:  ', answer)
 
     window4.close_on_mouse_click()
@@ -227,7 +227,7 @@ def problem3b(m, point1):
         :type point1: rg.Point
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ###########################################################################
@@ -240,6 +240,21 @@ def problem3b(m, point1):
     #    DIFFICULTY:      8 or 9
     #    TIME ESTIMATE:   20 to 30 minutes.
     # -------------------------------------------------------------------------
+    counterLine = 3
+    counterPoint = 60
+    window = rg.RoseWindow(400, 650)
+    sum = 0
+    for k in range(m):
+        sum = sum + problem3a(window, point1, counterLine)
+        point1.y = point1.y + counterPoint
+        counterLine = counterLine +2
+        counterPoint = counterPoint + 60
+    window.close_on_mouse_click()
+    return sum
+
+
+
+
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
